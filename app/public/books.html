@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+
+  <title> Assignment 2</title>
+</head>
+
+  <body>
+  <div class="container-fluid">
+
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="books.html">Library</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="events.html">Events</a>
+      </li>
+    </ul>
+
+
+  <table id="books" class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Author(s)</th>
+        <th scope="col">Year published</th>
+        <th scope="col">Publisher</th>
+        <th scope="col">Page count</th>
+        <th scope="col">MSRP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry the Bird</td>
+        <td>@twitter</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>Larry the Bird</td>
+        <td>@twitter</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <br>
+
+
+  <h1 id= "add"=>Add/ Look up Book</h1>
+  <form>
+  <div class="form-group">
+    <label for="Title">Title</label>
+    <input type="text" class="form-control" id="Title">
+  </div>
+  <div class="form-group">
+    <label for="Author">Author</label>
+    <input type="text" class="form-control" id="Author">
+  </div>
+  <div class="form-group">
+    <label for="Year Published">Year Published</label>
+    <input type="date" class="form-control" id="Year Published">
+  </div>
+  <div class="form-group">
+    <label for="Publisher">Publisher</label>
+    <input type="text" class="form-control" id="Publisher">
+  </div>
+  <div class="form-group">
+    <label for="Page Count">Page Count</label>
+    <input type="number" class="form-control" id="Page Count">
+  </div>
+  <div class="form-group">
+    <label for="MSRP">Price</label>
+    <input type="number" class="form-control" id="Price">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <!-- Tablesort plugin http://tristen.ca/tablesort/demo/ -->
+  <script src="js/tablesort.min.js"></script>
+  <script>
+    new Tablesort(document.getElementById('books'));
+  </script>
+
+</body>
+</html>
