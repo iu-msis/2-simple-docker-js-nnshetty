@@ -10,9 +10,13 @@
 
   <title> Assignment 2</title>
   <link rel="stylesheet" href="css/style.css">
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 </head>
 
-<body>
+ <body>
   <div class="container-fluid">
     <nav>
     <ul class="nav">
@@ -26,14 +30,26 @@
         <a class="nav-link" href="events.html">Events</a>
       </li>
     </ul>
-    <nav>
-  <div class="img">
+  </nav>
+
+    <div id='userapp'>
+      <p> Name: {{userName}} </p>
+      <p> Email: <a href="mailto:jamie.douglas@gmail.com"> {{userEmail}} </a></p>
+      <p> Country: {{userCountry}} </p>
+      <p> Birthdate: {{userBirthdate}} </p>
+      <p> Age: {{userAge}} </p>
+      <a v-bind:href="userPicLarge">
+         <img v-bind:src="userPicThumb">
+      </a>
+
+    </div>
+  <!-- <div class="img">
       <a target="_blank" href="img/image1.jpg">
         <img src="img/image1.jpg" alt="Chen Bin Bin" height=200px class="img-responsive">
       </a>
   </div>
 
-
+w
 
   <div class="center">
   <h1>Identification</h1>
@@ -57,7 +73,10 @@
   <p> State: Fireford</p>
   <p> Postcode": 93234</p>
   <p> Timezone: ZST</p>
-  </div>
+  </div>  -->
+
+
+
 
   <footer class="row">
       <h4>Manchester City FC| Phone: 850-888-1234 | Daytona Beach, FL 36578</h4>
@@ -66,6 +85,9 @@
       <p> Image Source: https://www.worldfootball.net/player_summary/binbin-chen/</p>
   </footer>
   </div>
-  
-</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="js/user.js"></script>
+
+  </body>
 </html>
