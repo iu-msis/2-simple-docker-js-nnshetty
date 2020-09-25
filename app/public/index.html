@@ -32,17 +32,23 @@
     </ul>
   </nav>
 
-    <div id='userapp'>
-      <p> Name: {{userName}} </p>
-      <p> Email: <a href="mailto:jamie.douglas@gmail.com"> {{userEmail}} </a></p>
-      <p> Country: {{userCountry}} </p>
-      <p> Birthdate: {{userBirthdate}} </p>
-      <p> Age: {{userAge}} </p>
-      <a v-bind:href="userPicLarge">
-         <img v-bind:src="userPicThumb">
-      </a>
 
+    <div id='userapp'>
+        <form method= "get" v-on:submit.prevent="fetchUser">
+          <p> Name: {{userName}} </p>
+          <p> Email: <a href="mailto:jamie.douglas@gmail.com"> {{userEmail}} </a></p>
+          <p> Country: {{userCountry}} </p>
+          <p> Birthdate: {{userBirthdate}} </p>
+          <p> Age: {{userAge}} </p>
+          <a v-bind:href="userPicLarge">
+             <img v-bind:src="userPicThumb">
+          </a>
+          <div>
+         <p><button type="submit"> Refresh </button></p>
+        </form>
     </div>
+
+
   <!-- <div class="img">
       <a target="_blank" href="img/image1.jpg">
         <img src="img/image1.jpg" alt="Chen Bin Bin" height=200px class="img-responsive">
