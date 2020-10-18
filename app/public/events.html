@@ -27,6 +27,23 @@
       </li>
     </ul>
 
+    <div id='commentsId'>
+        <div class="comments" v-for="comment in comments">
+          <span class="id">ID: {{ comment.id }}</span> <br>,
+          <span class="commentText">CommentText: {{ comment.commentText }}</span>
+         <!-- <p><button type="submit"> Refresh </button></p> -->
+       </div>
+
+       <form v-on:submit.prevent="CreateUser()">
+         <div class="comments">
+           <label for="commentText">Comment Text:</label>
+           <input type="text" class="form-control" id="commentcommentText" v-model="newcomments.commentText" placeholder="">
+         </div>
+         <input type="submit" value="Create User" class="button"</p>
+       </form>
+    </div>
+
+
     <h1 class="title">Thank you</h1>
     <p> Thank you for Buying the books you bought. Have a great day and wear a mask when you go out</p>
 
@@ -41,9 +58,12 @@
 <br>
 <br>
 
-<footer>
-<p> Image Source: https://i.pinimg.com/originals/20/ab/34/20ab342b8b3032309cf6a394332356bb.jpg</p>
-</footer>
+  <footer>
+    <p> Image Source: https://i.pinimg.com/originals/20/ab/34/20ab342b8b3032309cf6a394332356bb.jpg</p>
+  </footer>
 
-</body>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <script src="js/index.app.js"></script>
+
+  </body>
 </html>
