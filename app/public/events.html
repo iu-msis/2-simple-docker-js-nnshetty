@@ -29,17 +29,32 @@
 
     <div id='commentsId'>
         <div class="comments" v-for="comment in comments">
-          <span class="id">ID: {{ comment.id }}</span> <br>,
-          <span class="commentText">CommentText: {{ comment.commentText }}</span>
-         <!-- <p><button type="submit"> Refresh </button></p> -->
-       </div>
+          <table id = "commentTable" class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Comment Text</th>
+              </tr>
+            </thead>
 
-       <form v-on:submit.prevent="CreateUser()">
+          <tbody id = "commentTableBody">
+              <tr>
+              <td><span class="id">{{ comment.id }}</span> <br></td>,
+              <td><span class="commentText">{{ comment.commentText }}</span></td>
+         <!-- <p><button type="submit"> Refresh </button></p> -->
+              </tr>
+          </tbody>
+          </table>
+          </div>
+          <br>
+          <br>
+          <br>
+       <form id="newCommentForm" v-on:submit.prevent="CreateUser()">
          <div class="comments">
            <label for="commentText">Comment Text:</label>
            <input type="text" class="form-control" id="commentcommentText" v-model="newcomments.commentText" placeholder="">
          </div>
-         <input type="submit" value="Create User" class="button"</p>
+         <input type="submit" value="Submit New Comment" id="submitNewComment" class="button">
        </form>
     </div>
 
