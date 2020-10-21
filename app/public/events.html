@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:;base64,=">
   <title> Assignment 2</title>
 </head>
 
@@ -27,6 +28,38 @@
       </li>
     </ul>
 
+    <div id='commentsId'>
+        <div class="comments">
+          <table id = "commentTable" class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Comment Text</th>
+              </tr>
+            </thead>
+
+          <tbody id = "commentTableBody">
+              <tr v-for="comment in comments">
+              <td><span class="id">{{ comment.id }}</span> <br></td>,
+              <td><span class="commentText">{{ comment.commentText }}</span></td>
+         <!-- <p><button type="submit"> Refresh </button></p> -->
+              </tr>
+          </tbody>
+          </table>
+          </div>
+          <br>
+          <br>
+          <br>
+       <form id="newCommentForm" v-on:submit.prevent="CreateUser()">
+         <div class="comments">
+           <label for="commentText">Comment Text:</label>
+           <input type="text" class="form-control" id="commentcommentText" v-model="newcomments.commentText" placeholder="">
+         </div>
+         <input type="submit" value="Submit New Comment" id="submitNewComment" class="button">
+       </form>
+    </div>
+
+
     <h1 class="title">Thank you</h1>
     <p> Thank you for Buying the books you bought. Have a great day and wear a mask when you go out</p>
 
@@ -41,9 +74,12 @@
 <br>
 <br>
 
-<footer>
-<p> Image Source: https://i.pinimg.com/originals/20/ab/34/20ab342b8b3032309cf6a394332356bb.jpg</p>
-</footer>
+  <footer>
+    <p> Image Source: https://i.pinimg.com/originals/20/ab/34/20ab342b8b3032309cf6a394332356bb.jpg</p>
+  </footer>
 
-</body>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <script src="js/index.app.js"></script>
+
+  </body>
 </html>
